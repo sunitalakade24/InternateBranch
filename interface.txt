@@ -1,0 +1,59 @@
+using System;
+
+namespace interface_abstract
+{
+    /*interface cannot have implemetation, cannot have access modifier,by default public,don't have common functionality,os and appstore is same*/
+    /*iphone-model-call ad sms commn functionality  and iphone 6 code reusability 2. cannot crete instance, can never sealed or static class,abstract or non- abstract method,can crete constructor,multiple inheritance not possible*/
+    public  interface iphone
+    {
+        void os();
+        void appstore();
+       
+
+    }
+    public interface Itouchscreen
+    {
+        void Touch();
+
+    }
+
+    public class Iphone5 : iphone, Itouchscreen
+    {
+        public void appstore()
+        {
+            Console.WriteLine("data");
+        }
+
+        public void os()
+        {
+            Console.WriteLine("data1");
+        }
+        public void Touch()
+        {
+            Console.WriteLine("new");
+        }
+    }
+        public class Adroid : iphone
+        {
+            public void appstore()
+            {
+                Console.WriteLine("data");
+            }
+
+            public void os()
+            {
+                Console.WriteLine("data1");
+            }
+
+
+        }
+   
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+        }
+    }
+}

@@ -1,0 +1,62 @@
+/*iphone-model-call ad sms commn functionality  and iphone 6 code reusability 2. cannot crete instance, can never sealed or static class,abstract or non- abstract method,can crete constructor,multiple inheritance not possible*/
+    public abstract class iphone
+    {
+        public void call()
+        {
+            Console.WriteLine("phone call");
+        }
+       
+        public void sms()
+        {
+            Console.WriteLine("phone sms");
+        }
+        public abstract void phonecolor();
+        public abstract void phonemodel();
+    }
+    public abstract class iphone2
+    {
+
+    }
+    public class Iphone5:iphone
+    {
+        public override void phonecolor()
+        {
+            Console.WriteLine("black");
+        }
+        public override void phonemodel()
+        {
+            Console.WriteLine("iphone5");
+        }
+
+    }
+    public class iphone7:iphone
+    {
+        public override void phonecolor()
+        {
+            Console.WriteLine("blue");
+        }
+        public override void phonemodel()
+        {
+            Console.WriteLine("iphone7");
+        }
+    }
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            iphone ob = new Iphone5();
+            ob.call();
+            ob.sms();
+            ob.phonecolor();
+            ob.phonemodel();
+
+            iphone ob1 = new iphone7();
+            ob1.call();
+            ob1.sms();
+            ob1.phonecolor();
+            ob1.phonemodel();
+        }
+    }
+}
